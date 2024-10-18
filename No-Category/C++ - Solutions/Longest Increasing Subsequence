@@ -17,15 +17,15 @@ int main() {
         return 0;
     }
 
-    vector<int> dp_my_ahh(n,1);
+    vector<int> dp_arr(n,1);
     int m = 1;
     for(int i=0;i<n;i++){
         for(int j=0;j<i;j++){
             if(nums[i] > nums[j]){
-                dp_my_ahh[i] = max(dp_my_ahh[i],dp_my_ahh[j]+1);
+                dp_arr[i] = max(dp_arr[i],dp_arr[j]+1);
             }
         }
-        m = max(m,dp_my_ahh[i]);
+        m = max(m,dp_arr[i]);
     }
     cout << m << "\n";
 }
